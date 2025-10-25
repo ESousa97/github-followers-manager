@@ -1,4 +1,4 @@
-# GitHub Followers Manager
+# GitHuGG
 
 Uma aplicação web simples para gerenciar seus seguidores no GitHub.
 
