@@ -60,4 +60,6 @@ Uma aplicação web simples para gerenciar seus seguidores no GitHub.
 
 ---
 
+Link: https://github-followers-manager-murex.vercel.app
+
 Desenvolvido com ❤️ para facilitar o gerenciamento de followers no GitHub
