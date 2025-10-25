@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Followers Manager</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-search"></i> GitHub Followers Manager</h1>
+            <p>Gerencie seus seguidores e seguindo no GitHub</p>
+        </header>
+
+        <div class="auth-section">
+            <div class="input-group">
+                <input type="text" id="username" placeholder="Seu usuário do GitHub" />
+                <input type="password" id="token" placeholder="Token de acesso (opcional para deixar de seguir)" />
+                <button id="checkBtn" class="btn btn-primary">Verificar</button>
+            </div>
+            <p class="info">
+                <i class="fas fa-info-circle"></i> O token é necessário apenas para seguir/deixar de seguir usuários. 
+                <a href="https://github.com/settings/tokens" target="_blank">Criar token</a> 
+                (permissão: user:follow)
+            </p>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Carregando dados...</p>
+        </div>
+
+        <div id="error" class="error hidden"></div>
+
+        <div id="results" class="results hidden">
+            <div class="stats">
+                <div class="stat-card">
+                    <h3><i class="fas fa-users"></i> Seguidores</h3>
+                    <p class="stat-number" id="followersCount">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3><i class="fas fa-user-friends"></i> Seguindo</h3>
+                    <p class="stat-number" id="followingCount">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3><i class="fas fa-user-times"></i> Não te seguem</h3>
+                    <p class="stat-number" id="notFollowingBackCount">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3><i class="fas fa-user-plus"></i> Não seguindo</h3>
+                    <p class="stat-number" id="notFollowingCount">0</p>
+                </div>
+            </div>
+
+            <div class="users-section">
+                <h2>Usuários que você segue mas não te seguem de volta</h2>
+                <div id="notFollowingBackList" class="users-list"></div>
+            </div>
+
+            <div class="users-section">
+                <h2>Usuários que te seguem mas você não segue de volta</h2>
+                <div id="notFollowingList" class="users-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/enoque-sousa-bb89aa168/" target="_blank" rel="noopener noreferrer" class="social-link linkedin" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://enoquesousa.vercel.app" target="_blank" rel="noopener noreferrer" class="social-link portfolio" title="Portfólio">
+                    <i class="fas fa-briefcase"></i>
+                </a>
+                <a href="https://projportfolio-henna.vercel.app" target="_blank" rel="noopener noreferrer" class="social-link projects" title="Vitrine de Projetos">
+                    <i class="fas fa-folder-open"></i>
+                </a>
+                <a href="https://github.com/ESousa97" target="_blank" rel="noopener noreferrer" class="social-link github" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <p class="footer-copyright">Desenvolvido por Enoque Sousa © 2025</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
